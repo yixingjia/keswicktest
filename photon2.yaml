@@ -1,7 +1,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: photon-forVMexplorer
+  name: photon-forvmexplorer
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
@@ -13,13 +13,13 @@ spec:
   - networkName: "VM Network"
     ethernetCardType: "vmxnet3"
   vmMetadata:
-    configMapName: user-data-2
+    configMapName: user-data-new
     transport: CloudInit
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-    name: user-data-2
+    name: user-data-new
     namespace: default
 data:
   user-data: |
